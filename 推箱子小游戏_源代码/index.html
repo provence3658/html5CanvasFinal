@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+	<title>推箱子</title>
+</head>
+<body onkeydown="doKeyDown(event)">
+	<canvas id="mycanvas" width="600" height="600"></canvas>
+	<div id="choose">
+		<div id="chooseRoles">
+			<div id="chooseRoleText">角色选择</div>
+			<img src="images/downgirl.png" />
+			<img src="images/downboy.png" />
+			<input type="radio" name="chooseRole" value="girl" id="girl"  checked/>girl
+			<input type="radio" name="chooseRole" value="boy" id="boy">boy
+		</div>
+		<div id="chooseLevels">
+			<div id="chooseLevelText">难度选择</div>
+			<input type="radio" name="chooseLevel" value="simple" class="chooseLevel" checked/>simple
+			<input type="radio" name="chooseLevel" value="medium" class="chooseLevel" >medium
+			<input type="radio" name="chooseLevel" value="difficult" class="chooseLevel" >difficult
+		</div>
+		<!-- <div id="recharge">
+			<div id="rechargeText">金币充值</div>
+			<img src="images/jb0.png" style="margin-left: 38px">	
+		</div> -->
+	</div>
+	<div class="buttons">	
+		<button class="button orange" id="ruleButton">游戏规则</button>
+		<button class="button orange" id="startButton">游戏开始</button>
+		<button id="startButton1"></button>
+		<button id="animate"></button>
+		<button id="home"></button>
+	</div>	
+	<div id="current">
+		<audio id="audioBg" controls="controls" loop="true" preload="auto" hidden="true" src="music/welcome.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioStart" autoplay="autoplay" controls="controls" loop="true" preload="auto" hidden="true" src="music/start.wav">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioSuccess" controls="controls" preload="auto" loop="true" hidden="true" src="music/success.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioFail" controls="controls" preload="auto" loop="true" hidden="true" src="music/fail.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioLucky" controls="controls" preload="auto" loop="true" hidden="true" src="music/lucky.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<input type="button" id="musicOnButton"/>
+		<div id="msg1"></div>
+		<img src="images/box2.png" style="margin-left: 5px" />
+		<img src="images/jb.png" style="margin-left: 9px; margin-top: 5px;" />
+		<div id="msg0"></div>		
+		<div id="msg2"></div>
+		<input type="button" value="下一关" id="next" class="currentButton" >
+		<input type="button" value="重玩金币-2" id="replay" class="currentButton" >
+		<input type="button" value="通关金币-5" id="jbk5" class="currentButton" >
+		<input type="button" value="随机关卡-3" id="random" class="currentButton" >
+		<input type="button" value="我认怂:)" id="return" class="currentButton" >
+	</div>
+	<script src="js/sprites.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/level.js"></script>
+	<script src="js/random.js"></script>
+	<script src="js/buttonEvent.js"></script>
+</body>
+</html>
